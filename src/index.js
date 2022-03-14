@@ -3,10 +3,12 @@ import ReactDOM from 'react-dom';
 import './index.css';
 import WeatherSearch from './WeatherSearch';
 import reportWebVitals from './reportWebVitals';
+import Socials from './Socials'
 
 ReactDOM.render(
   <React.StrictMode>
     <WeatherSearch />
+    <Socials />
   </React.StrictMode>,
   document.getElementById('root')
 );

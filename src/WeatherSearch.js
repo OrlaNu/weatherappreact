@@ -28,6 +28,7 @@ export default function WeatherSearch() {
   return (
     <div className="App">
       <h1>Weather Search</h1>
+      <h2>Not styled yet</h2>
       <form onSubmit={handleSubmit}>
         <input type="text" placeholder="Type a city" onChange={changeCity} />
         <input type="submit" value="Search" />
