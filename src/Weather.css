@@ -1,0 +1,43 @@
+.Weather {
+    border: 2px solid aquamarine;
+    text-align: center;
+    width: 450px;
+    height: 520px;
+    border-radius: 10px;
+    box-shadow: 7px 7px 20px rgba(0, 0, 0, 0.3);
+    background: radial-gradient(328px at 2.9% 15%, rgb(191, 224, 251) 0%, rgb(232, 233, 251) 25.8%, rgb(252, 239, 250) 50.8%, rgb(234, 251, 251) 77.6%, rgb(240, 251, 244) 100.7%);
+}
+
+h1 {
+    padding: 30px;
+}
+h1, h2 {
+    font-family: 'Raleway', sans-serif;
+    font-weight: bold;
+}
+
+.Date, ul {
+    list-style-type: none;
+}
+
+.WeatherInfoList{
+    font-family: 'Source Code Pro', monospace;
+}
+
+.IconImage {
+    display: block;
+    margin: 0 auto;
+    margin-bottom: 0px;
+    margin-top: 0px;
+    text-align: center;
+    height: 150px;
+    width: 150px;
+}
+
+input:focus::placeholder {
+    color: transparent;
+}
+
+input::placeholder {
+    transition: color 0.3s ease;
+}

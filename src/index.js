@@ -1,16 +1,15 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
 import './index.css';
-import WeatherSearch from './WeatherSearch';
 import reportWebVitals from './reportWebVitals';
-import Socials from './Socials'
 import 'bootstrap/dist/css/bootstrap.css';
+import App from './App';
+
 
 
 ReactDOM.render(
   <React.StrictMode>
-    <WeatherSearch />
-    <Socials />
+    <App />
   </React.StrictMode>,
   document.getElementById('root')
 );

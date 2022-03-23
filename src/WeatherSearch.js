@@ -1,5 +1,6 @@
 import React, { useState } from "react";
 import axios from "axios";
+import './Weather.css'
 
 export default function WeatherSearch() {
   const [city, setCity] = useState("");
@@ -26,24 +27,25 @@ export default function WeatherSearch() {
   }
 
   return (
-    <div className="App">
+    <div className="Weather">
       <h1>Weather Search</h1>
-      <h2>Not styled yet</h2>
-      <form onSubmit={handleSubmit}>
-        <input type="text" placeholder="Type a city" onChange={changeCity} />
-        <input type="submit" value="Search" />
-      </form>
+      <div className="row">
+        <form onSubmit={handleSubmit}>
+          <input type="text" placeholder="Type a city" onChange={changeCity} />
+          <input type="submit" value="Search" />
+        </form>
+      </div>
+      <ul className="Date">
+        <li>Wednesday 7:00</li>
+      </ul>
+      <h2 className="WeatherInfo">{temperature.city}</h2>
       {temperature && (
-        <h3 className="WeatherInfo">
-          <ul>
-            <h2>{temperature.city}</h2>
-            <li>Temp: {Math.round(temperature.temperature)}°</li>
-            <li>Wind: {Math.round(temperature.wind)}km/h</li>
-            <li>
-              <img src={temperature.icon} alt="Weather Icon" />
-            </li>
+          <ul className="WeatherInfoList">
+            <li><img className="IconImage" src={temperature.icon} alt="Weather Icon"/></li>
+              <li>Temp: {Math.round(temperature.temperature)}°</li>
+              <li>Wind: {Math.round(temperature.wind)}km/h</li>
+              
           </ul>
-        </h3>
       )}
     </div>
   );
