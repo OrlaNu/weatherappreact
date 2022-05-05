@@ -49,3 +49,11 @@ input::placeholder {
 .temperature {
     font-size: 20px;
 }
+
+.unit {
+    text-decoration: none;
+}
+
+.unit:hover {
+    cursor: pointer;
+}

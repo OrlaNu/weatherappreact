@@ -1,6 +1,7 @@
 import React, { useState } from "react";
 //import FormattedDate from "./FormattedDate";
 import WeatherTemperature from "./WeatherTemperature"
+import WeatherInfo from "./WeatherInfo"
 import axios from "axios";
 import './Weather.css'
 
@@ -46,15 +47,8 @@ return (
 	</li>
 	</ul> */}
 	<h2 className="WeatherInfo">{temperature.city}</h2>
-	<WeatherTemperature celsius={props.temperature}/>
-	{temperature && (
-		<ul className="WeatherInfoList">
-			<li><img className="IconImage" src={temperature.icon} alt="Weather Icon"/></li>
-			<li className="text-capitalize">{temperature.description}</li>
-			<li>Wind: {Math.round(temperature.wind)}km/h</li>
-			<li>Humidity: {Math.round(temperature.humidity)}%</li>    
-		</ul>
-	)}
+	<WeatherTemperature celsius={temperature.temp}/>
+	<WeatherInfo weather_info={temperature} />
 </div>
 );
 }
