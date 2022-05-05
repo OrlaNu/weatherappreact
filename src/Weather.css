@@ -20,6 +20,10 @@ h1, h2 {
     list-style-type: none;
 }
 
+.WeatherInfo {
+    padding-top:30px;
+}
+
 .WeatherInfoList{
     font-family: 'Source Code Pro', monospace;
 }
@@ -40,4 +44,8 @@ input:focus::placeholder {
 
 input::placeholder {
     transition: color 0.3s ease;
+}
+
+.temperature {
+    font-size: 20px;
 }
