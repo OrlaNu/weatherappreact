@@ -57,3 +57,9 @@ input::placeholder {
 .unit:hover {
     cursor: pointer;
 }
+
+.SocialsInfo {
+    color: black;
+    padding: 5px;
+    
+}
