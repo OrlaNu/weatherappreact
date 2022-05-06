@@ -39,11 +39,6 @@ function search() {
 	axios.get(url).then(showWeather);
 }
 
-function handleSubmit(event) {
-	event.preventDefault();
-	search();
-}
-
 if (ready) {
 	return (
 	<div className="Weather">
