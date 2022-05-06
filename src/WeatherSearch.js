@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import FormatDate from "./FormatDate";
+// import FormatDate from "./FormatDate";
 import WeatherTemperature from "./WeatherTemperature"
 import WeatherInfo from "./WeatherInfo"
 import axios from "axios";
@@ -41,11 +41,11 @@ return (
 			<input type="submit" value="Search" />
 		</form>
 	</div>
-	<ul className="Date">
+	{/* <ul className="Date">
 		<li>
 			<FormatDate date={temperature.date}/>
 		</li>
-	</ul>
+	</ul> */}
 	<h2 className="WeatherInfo">{temperature.city}</h2>
 		<WeatherTemperature celsius={temperature.temp}/>
 		<WeatherInfo weather_info={temperature} />
