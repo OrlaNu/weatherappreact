@@ -1,4 +1,8 @@
 .Weather {
+    display:block;
+    margin: 0 auto;
+    position: relative;
+    top: 70px;
     border: 2px solid aquamarine;
     text-align: center;
     width: 450px;
@@ -24,7 +28,11 @@ h1, h2 {
     padding-top:30px;
 }
 
-.WeatherInfoList{
+.Temperature {
+    font-size: 20px;
+}
+
+.WeatherInfoList, .Temperature {
     font-family: 'Source Code Pro', monospace;
 }
 
@@ -33,7 +41,6 @@ h1, h2 {
     margin: 0 auto;
     margin-bottom: 0px;
     margin-top: 0px;
-    text-align: center;
     height: 150px;
     width: 150px;
 }
@@ -46,20 +53,18 @@ input::placeholder {
     transition: color 0.3s ease;
 }
 
-.temperature {
+.Temperature {
     font-size: 20px;
 }
 
-.unit {
-    text-decoration: none;
+.Socials {
+    position: relative;
+    top: 100px;
 }
-
-.unit:hover {
-    cursor: pointer;
-}
-
 .SocialsInfo {
     color: black;
     padding: 5px;
+    height: 10px;
+    width: 10px;
     
 }

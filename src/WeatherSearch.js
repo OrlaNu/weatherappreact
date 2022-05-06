@@ -1,5 +1,6 @@
 import React, { useState } from "react";
 // import FormatDate from "./FormatDate";
+import Loading from "./Loading"
 import WeatherTemperature from "./WeatherTemperature"
 import WeatherInfo from "./WeatherInfo"
 import axios from "axios";
@@ -65,6 +66,6 @@ if (ready) {
 		);
 	} else {
 		search();
-		return "Loading...";
+		return <Loading />;
 	}
 }
