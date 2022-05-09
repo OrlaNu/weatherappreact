@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-// import FormatDate from "./FormatDate";
+import FormatDate from "./FormatDate";
 import Loading from "./Loading"
 import WeatherTemperature from "./WeatherTemperature"
 import WeatherInfo from "./WeatherInfo"
@@ -42,6 +42,7 @@ function search() {
 if (ready) {
 	return (
 	<div className="Weather">
+		<FormatDate date={weatherData.date}/>
 		<h1>Weather Search</h1>
 		<div className="row">
 			<form onSubmit={handleSubmit}>
@@ -49,11 +50,6 @@ if (ready) {
 				<input type="submit" value="Search" />
 			</form>
 		</div>
-		{/* <ul className="Date">
-			<li>
-				<FormatDate date={temperature.date}/>
-			</li>
-		</ul> */}
 		<h2 className="WeatherInfo">{weatherData.city}</h2>
 			<WeatherTemperature celsius={weatherData.temp}/>
 			<WeatherInfo weather_info={weatherData} />

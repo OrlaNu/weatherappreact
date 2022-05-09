@@ -20,19 +20,25 @@ h1, h2 {
     font-weight: bold;
 }
 
-.Date, ul {
+ul {
     list-style-type: none;
 }
 
-.WeatherInfo {
-    padding-top:30px;
+.Date {
+    padding-top: 10px;
+    font-size: 14px;
+    opacity: 50%;
 }
 
 .Temperature {
     font-size: 20px;
 }
 
-.WeatherInfoList, .Temperature {
+h2 {
+    padding-top: 20px;
+}
+
+.WeatherInfoList, .Temperature, .Date {
     font-family: 'Source Code Pro', monospace;
 }
 
