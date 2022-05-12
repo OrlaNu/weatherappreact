@@ -1,8 +1,8 @@
 import React, { useState } from "react";
 import FormatDate from "./FormatDate";
-import Loading from "./Loading"
 import WeatherTemperature from "./WeatherTemperature"
 import WeatherInfo from "./WeatherInfo"
+import WeatherForecast from "./WeatherForecast"
 import axios from "axios";
 import './Weather.css'
 
@@ -14,13 +14,14 @@ export default function WeatherSearch(props) {
 
 function showWeather(response) {
 	setWeatherData({
+		coordinates: response.data.coord,
 		city: response.data.name,
 		description: response.data.weather[0].description,
 		temp: response.data.main.temp,
 		wind: response.data.wind.speed,
 		humidity: response.data.main.humidity,
 		date: new Date(response.data.dt * 1000),
-		icon: `http://openweathermap.org/img/wn/${response.data.weather[0].icon}@2x.png`
+		icon: response.data.weather[0].icon,
 	});
 	setReady(true);
 }
@@ -35,7 +36,8 @@ function changeCity(event) {
 }
 
 function search() {
-	let url = `https://api.openweathermap.org/data/2.5/weather?q=${city}&appid=a654db2f9bd0b0e600c5ab56e23dc457&units=metric`;
+	let api_key = "a654db2f9bd0b0e600c5ab56e23dc457"
+	let url = `https://api.openweathermap.org/data/2.5/weather?q=${city}&appid=${api_key}&units=metric`;
 	axios.get(url).then(showWeather);
 }
 
@@ -53,10 +55,11 @@ if (ready) {
 		<h2 className="WeatherInfo">{weatherData.city}</h2>
 			<WeatherTemperature celsius={weatherData.temp}/>
 			<WeatherInfo weather_info={weatherData} />
+			<WeatherForecast coordinates={weatherData.coordinates}/>
 		</div>
 		);
 	} else {
 		search();
-		return <Loading />;
+		return "Loading...";
 	}
 }
