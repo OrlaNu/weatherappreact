@@ -23,7 +23,7 @@ export default function Icon(props) {
         "50n": "FOG",
     };
 
-    const colorMapping ={
+    const colorMapping = {
         "01d": "#ffdfba",
         "01n": "#373854",
         "02d": "#ffdfba",
@@ -47,7 +47,7 @@ export default function Icon(props) {
     return(
         <ReactAnimatedWeather
         icon={codeMapping[props.code]}
-        color={colorMapping[props.color]}
+        color={colorMapping[props.iconColours]}
         size={props.size}
         animate={true}
         />

@@ -28,10 +28,11 @@ export default function WeatherForecast(props) {
                             </div>
                             )
                         }
+                        return null;
                     })} 
             </div>
         </div>
-        )
+        );
     } else {
         let apiKey = "a654db2f9bd0b0e600c5ab56e23dc457";
         let latitude = props.coordinates.lat;
@@ -39,6 +40,6 @@ export default function WeatherForecast(props) {
         let apiUrl=`https://api.openweathermap.org/data/2.5/onecall?lat=${latitude}&lon=${longitude}&appid=${apiKey}&units=metric`;
 
         axios.get(apiUrl).then(handleResponse)
-        return "Loading...";
+        return null;
     }
 }
