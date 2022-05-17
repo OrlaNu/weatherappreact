@@ -13,7 +13,8 @@
 }
 
 h1 {
-    padding: 30px;
+    padding-top: 30px;
+    padding-bottom: 10px;
 }
 h1, h2 {
     font-family: 'Raleway', sans-serif;
@@ -22,6 +23,8 @@ h1, h2 {
 
 ul {
     list-style-type: none;
+    text-align: center;
+    margin-right: 45px;
 }
 
 .Date {
@@ -45,10 +48,6 @@ h2 {
 
 }
 
-ul {
-    text-align: center;
-    }
-
 .Weather canvas {
     display: block;
     margin-bottom: 15px;
@@ -57,12 +56,25 @@ ul {
     margin-top: 15px;
 }
 
+input[type=text], input[type=button], input[type=submit], input[type=reset]  {
+    border: 2px solid aquamarine;
+    outline: none; 
+    background: rgb(252, 255, 254);
+    border-radius: 5px;
+    box-shadow:0 0 15px 4px rgba(0,0,0,0.06);
+    font-family: 'Raleway', sans-serif;
+}
+
 input:focus::placeholder {
     color: transparent;
 }
 
 input::placeholder {
     transition: color 0.3s ease;
+}
+
+input[type=button], input[type=submit], input[type=reset] {
+    opacity: 0.7;
 }
 
 .Temperature {
