@@ -1,7 +1,5 @@
 .Weather {
-    background: radial-gradient(328px at 2.9% 15%, rgb(191, 224, 251) 0%, rgb(232, 233, 251) 25.8%, rgb(252, 239, 250) 50.8%, rgb(234, 251, 251) 77.6%, rgb(240, 251, 244) 100.7%);
     border-radius: 10px;
-    border: 2px solid aquamarine;
     box-shadow: 7px 7px 20px rgba(0, 0, 0, 0.3);
     display:block;
     height: auto;
@@ -10,6 +8,40 @@
     text-align: center;
     top: 70px;
     width: 500px;
+}
+
+#light .Weather {
+    background: radial-gradient(328px at 2.9% 15%, rgb(191, 224, 251) 0%, rgb(232, 233, 251) 25.8%, rgb(252, 239, 250) 50.8%, rgb(234, 251, 251) 77.6%, rgb(240, 251, 244) 100.7%); ;
+    border: 2px solid aquamarine;
+}
+
+#light input[type=text], input[type=button], input[type=submit], input[type=reset]  {
+    border: 2px solid aquamarine;
+    background: rgb(252, 255, 254); 
+}
+
+#light .SocialsInfo {
+    color: black;
+}
+
+#dark {
+    background: #1C0C5B;
+    color: aliceblue;
+}
+
+#dark .Weather{
+    background: linear-gradient(89.7deg, rgb(0, 32, 95) 2.8%, rgb(132, 53, 142) 97.8%);
+    border: 2px solid #d5def5;
+}
+
+#dark input[type=text], input[type=button], input[type=submit], input[type=reset]  {
+        border: 2px solid #d5def5;
+        outline: none; 
+        background: rgb(252, 255, 254);
+}
+
+#dark .SocialsInfo {
+    color: #d5def5;
 }
 
 h1 {
@@ -57,9 +89,7 @@ h2 {
 }
 
 input[type=text], input[type=button], input[type=submit], input[type=reset]  {
-    border: 2px solid aquamarine;
     outline: none; 
-    background: rgb(252, 255, 254);
     border-radius: 5px;
     box-shadow:0 0 15px 4px rgba(0,0,0,0.06);
     font-family: 'Raleway', sans-serif;
@@ -86,7 +116,6 @@ input[type=button], input[type=submit], input[type=reset] {
     top: 100px;
 }
 .SocialsInfo {
-    color: black;
     height: 10px;
     padding: 5px;
     width: 10px;
@@ -102,4 +131,16 @@ input[type=button], input[type=submit], input[type=reset] {
 .WeatherForecast-temp-min {
     margin-left: 4px;
     opacity: 0.6;
+}
+
+.switch {
+    display: flex;
+    width: 100px;
+    height: 100px;
+    justify-content: center;
+    align-items: center;
+}
+
+.switch label{
+    margin:10px
 }
