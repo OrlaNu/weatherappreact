@@ -4,7 +4,7 @@ import React, { useState } from "react";
 import Socials from './Socials'
 import WeatherSearch from './WeatherSearch';
 import { createContext } from "react"; 
-import ReactSwitch from 'react-switch';
+import DarkModeToggle from "react-dark-mode-toggle";
 
 export const ThemeContext = createContext(null);
 
@@ -17,16 +17,13 @@ export default function App(){
   return (
   <ThemeContext.Provider value={{ theme, toggleTheme}}>
     <div className="App" id={theme}> 
-      <div className="container">
         <WeatherSearch defaultCity = "London"/>
         <Socials />
       <div className="switch">
-        <label> {theme === "light" ? "🌞 " : "🌙 "} </label>
-        <ReactSwitch onChange={toggleTheme} checked={theme ==="dark"}/>
-        
+        <label> {theme === "light"} </label>
+        <DarkModeToggle onChange={toggleTheme} checked={theme ==="dark"} size={80}/> 
       </div>
       </div>
-    </div>
   </ThemeContext.Provider>
   );
 }

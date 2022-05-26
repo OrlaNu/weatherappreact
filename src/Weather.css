@@ -24,9 +24,16 @@
     color: black;
 }
 
+a:link {
+    color: aquamarine;
+}
+
 #dark {
-    background: #1C0C5B;
     color: aliceblue;
+}
+
+#dark body {
+    background-color: #1C0C5B;
 }
 
 #dark .Weather{
@@ -134,13 +141,13 @@ input[type=button], input[type=submit], input[type=reset] {
 }
 
 .switch {
-    display: flex;
-    width: 100px;
     height: 100px;
     justify-content: center;
-    align-items: center;
+    position: relative;
+    top: 130px;
 }
 
 .switch label{
     margin:10px
 }
+

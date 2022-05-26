@@ -10,6 +10,6 @@ return (
             <a href="https://github.com/OrlaNu/weatherappreact" target="_blank" rel="noreferrer"> Open-source code </a>
             {" "} by Órla Nugent
         </p>
-    </div>  
+    </div> 
 );
 }
