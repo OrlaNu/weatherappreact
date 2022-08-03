@@ -2,7 +2,7 @@ import React, { useState } from "react";
 import Icon from "./Icon";
 
 export default function WeatherForecastDay(props) {
-    const [unit, setUnit] = useState('celsius');
+    const [unit] = useState('celsius');
 
     function maxTemperature() {
         let temperature = Math.round(props.data.temp.max);

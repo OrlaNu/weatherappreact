@@ -3,7 +3,6 @@ import FormatDate from "./FormatDate";
 import WeatherTemperature from "./WeatherTemperature"
 import WeatherInfo from "./WeatherInfo"
 import WeatherForecast from "./WeatherForecast"
-import CurrentLocation from "./CurrentLocation";
 import axios from "axios";
 import './Weather.css'
 
