@@ -25,7 +25,7 @@ export default function Icon(props) {
 
     const colorMapping = {
         "01d": "#ffdfba",
-        "01n": "#373854",
+        "01n": "#dadada",
         "02d": "#ffdfba",
         "02n": "#666666",
         "03d": "#ffdfba",

@@ -3,6 +3,7 @@ import FormatDate from "./FormatDate";
 import WeatherTemperature from "./WeatherTemperature"
 import WeatherInfo from "./WeatherInfo"
 import WeatherForecast from "./WeatherForecast"
+import CurrentLocation from "./CurrentLocation";
 import axios from "axios";
 import './Weather.css'
 
@@ -50,7 +51,9 @@ if (ready) {
 			<form onSubmit={handleSubmit}>
 				<input type="text" placeholder="Type a city" onChange={changeCity} />
 				<input type="submit" value="Search" />
+				{/* <CurrentLocation /> */}
 			</form>
+
 		</div>
 		<h2 className="WeatherInfo">{weatherData.city}</h2>
 			<WeatherTemperature celsius={weatherData.temp}/>

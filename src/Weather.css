@@ -10,12 +10,18 @@
     width: 500px;
 }
 
+
 #light .Weather {
     background: radial-gradient(328px at 2.9% 15%, rgb(191, 224, 251) 0%, rgb(232, 233, 251) 25.8%, rgb(252, 239, 250) 50.8%, rgb(234, 251, 251) 77.6%, rgb(240, 251, 244) 100.7%); ;
     border: 2px solid aquamarine;
 }
 
-#light input[type=text], input[type=button], input[type=submit], input[type=reset]  {
+#light .Locationbutton, input[type=text], input[type=button], input[type=submit], input[type=reset]  {
+    border: 2px solid aquamarine;
+    background: rgb(252, 255, 254); 
+}
+
+#light .LocationButton {
     border: 2px solid aquamarine;
     background: rgb(252, 255, 254); 
 }
@@ -24,16 +30,14 @@
     color: black;
 }
 
-a:link {
-    color: aquamarine;
+#light .SocialsIcon{
+    color: black;
 }
 
 #dark {
     color: aliceblue;
-}
-
-#dark body {
-    background-color: #1C0C5B;
+    background-color: #1d0c68;
+    overflow: auto;
 }
 
 #dark .Weather{
@@ -47,7 +51,7 @@ a:link {
         background: rgb(252, 255, 254);
 }
 
-#dark .SocialsInfo {
+#dark .SocialsInfo, .SocialsIcon {
     color: #d5def5;
 }
 
@@ -114,6 +118,17 @@ input[type=button], input[type=submit], input[type=reset] {
     opacity: 0.7;
 }
 
+.Location {
+    margin-left: 5px;
+    background: none;
+    color: inherit;
+    border: none;
+    padding: 0;
+    font: inherit;
+    cursor: pointer;
+    outline: inherit;
+    }
+
 .Temperature {
     font-size: 20px;
 }
@@ -121,11 +136,17 @@ input[type=button], input[type=submit], input[type=reset] {
 .Socials {
     position: relative;
     top: 100px;
+    font-family: 'Raleway', sans-serif;
 }
-.SocialsInfo {
-    height: 10px;
+
+a:visited{
+    color: inherit;
+}
+
+.SocialsIcon {
+    height: 30px;
     padding: 5px;
-    width: 10px;
+    width: 30px;
 }
 
 .WeatherForecast {
@@ -141,13 +162,13 @@ input[type=button], input[type=submit], input[type=reset] {
 }
 
 .switch {
-    height: 100px;
+    height: 60px;
     justify-content: center;
     position: relative;
-    top: 130px;
+    top: 100px;
 }
 
-.switch label{
-    margin:10px
-}
+/* .switch label{
+    margin:5px
+} */
 
