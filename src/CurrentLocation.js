@@ -17,6 +17,6 @@ export default function CurrentLocation(){
     }
 
     return(
-        <a><FaSearchLocation className="Location"onClick={handleLocation}/></a>
+        <FaSearchLocation className="Location"onClick={handleLocation}/>
     )
 }
